@@ -7,6 +7,7 @@ public class ButtonControl : MonoBehaviour
 {
     public GameObject pauseButton;
     public GameObject resumePanel;
+    
     // Start is called before the first frame update
     void Start()
     {
