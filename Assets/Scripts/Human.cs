@@ -16,9 +16,10 @@ public class Human : MonoBehaviour
     public List<GameObject> pick;
     public List<GameObject> images;
     private List<Vector3> particlePositions = new List<Vector3>();
+    [SerializeField]
     private List<ParticleSystem> victoryParticles = new List<ParticleSystem>();
     private Vector3 firstTouch, lastTouch;
-    private Vector3 particlePosition,particlePosition2,particlePosition3,particlePosition4;
+    
     private Vector3 camPosition;
     HumanParent parentSpeed;
 
@@ -30,10 +31,6 @@ public class Human : MonoBehaviour
     public GameObject finishPanel;
     public GameObject backButton;
     public GameObject camFollow;
-    public ParticleSystem victoryParticle;
-    public ParticleSystem victoryParticle2;
-    public ParticleSystem victoryParticle3;
-    public ParticleSystem victoryParticle4;
 
     private float pickCubePosition = 0;
     private int count = 0;
@@ -51,18 +48,8 @@ public class Human : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        particlePositions.Add(particlePosition);
-        particlePositions.Add(particlePosition2);
-        particlePositions.Add(particlePosition3);
-        particlePositions.Add(particlePosition4);
-        
-        victoryParticles.Add(victoryParticle);
-        victoryParticles.Add(victoryParticle2);
-        victoryParticles.Add(victoryParticle3);
-        victoryParticles.Add(victoryParticle4);
-        
         imageCount = 0;
-        ParticleFunction();
+        ParticleInitialization();
         
         thisAnimator = gameObject.GetComponent<Animator>();
         parentSpeed = GameObject.FindObjectOfType<HumanParent>();
@@ -78,7 +65,7 @@ public class Human : MonoBehaviour
             cam.transform.position = Vector3.Lerp(cam.transform.position,new Vector3(cam.transform.position.x, camPosition.y ,cam.transform.position.z),.2f*Time.deltaTime);
             
         }
-        Debug.Log("listedeki eleman say�s�"+pick.Count);
+        Debug.Log("element count "+pick.Count);
         if(finishControl == false) {
             
             if(Input.touchCount <= 1) {
@@ -149,11 +136,12 @@ public class Human : MonoBehaviour
         }
     }
 
-    public void ParticleFunction() {
-
-        for (int i = 0; i < particlePositions.Count; i++)
+    public void ParticleInitialization()
+    {
+        particlePositions = new List<Vector3>();
+        for (int i = 0; i < victoryParticles.Count; i++)
         {
-            particlePositions[i] = victoryParticles[i].transform.position;
+            particlePositions.Add(victoryParticles[i].transform.position);
             victoryParticles[i].transform.position = new Vector3(10f, 10f, 10f);
             victoryParticles[i].Pause();
         }
@@ -250,7 +238,8 @@ public class Human : MonoBehaviour
             touched = true;
         }
                 
-        for (int c = 0; c < stairsCubeCount; c++) {
+        for (int c = 0; c < stairsCubeCount; c++) 
+        {
 
             Debug.Log("passionpunch" + pick.Count);
             stairsCount += .3f;
