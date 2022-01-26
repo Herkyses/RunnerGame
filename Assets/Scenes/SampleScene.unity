@@ -6714,7 +6714,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250150047
 GameObject:
@@ -6998,7 +6998,7 @@ Transform:
   - {fileID: 1345455551}
   - {fileID: 1782037464}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270347628
 GameObject:
@@ -7254,7 +7254,7 @@ Transform:
   - {fileID: 1156642785}
   - {fileID: 944596150}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &329339821
 GameObject:
@@ -8246,7 +8246,7 @@ Transform:
   - {fileID: 109357849}
   - {fileID: 253810715}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &495849629 stripped
 GameObject:
@@ -12974,7 +12974,7 @@ Transform:
   - {fileID: 563004399}
   - {fileID: 9907164}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082792642
 GameObject:
@@ -14054,7 +14054,7 @@ Transform:
   m_LocalScale: {x: 71.114, y: 1, z: 384.4885}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217484489
 GameObject:
@@ -15924,7 +15924,7 @@ RectTransform:
   - {fileID: 1620565746}
   - {fileID: 43784767}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17672,6 +17672,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680039199}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1688900701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688900702}
+  m_Layer: 0
+  m_Name: PickDownParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688900702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688900701}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.60108215, y: -0.874, z: -0.094997585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700807112
 GameObject:
   m_ObjectHideFlags: 0
@@ -17900,7 +17930,7 @@ Transform:
   - {fileID: 1865675212}
   - {fileID: 1260826563}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708930372
 GameObject:
@@ -19701,7 +19731,7 @@ Transform:
   - {fileID: 2031201306}
   - {fileID: 1632111978}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080104025
 GameObject:
@@ -19832,6 +19862,7 @@ MonoBehaviour:
   - {fileID: 1523917076}
   swipeSpeed: 100
   pickParent: {fileID: 1604744167}
+  pickDownParent: {fileID: 1688900701}
   pickObject: {fileID: 495849629}
   tryAgainPanel: {fileID: 1203079647}
   finishPanel: {fileID: 1620565745}
@@ -19843,7 +19874,7 @@ MonoBehaviour:
   victoryParticle4: {fileID: 1777119032}
   stairsCount: 0
   stairsCount2: 0
-  temasEtti: 0
+  touched: 0
   camMove: 0
   stairsUp: 0
 --- !u!136 &2089162639
@@ -19876,19 +19907,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2089162641
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089162635}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3941534, y: 1, z: 0.120000005}
-  m_Center: {x: 0.012584671, y: 0.53, z: 0.3}
 --- !u!1001 &2089514443
 PrefabInstance:
   m_ObjectHideFlags: 0

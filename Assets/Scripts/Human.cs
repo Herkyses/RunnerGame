@@ -15,14 +15,16 @@ public class Human : MonoBehaviour
     
     public List<GameObject> pick;
     public List<GameObject> images;
+    private List<Vector3> particlePositions = new List<Vector3>();
+    private List<ParticleSystem> victoryParticles = new List<ParticleSystem>();
     private Vector3 firstTouch, lastTouch;
-    private Vector3 particlePosition;
-    private Vector3 particlePosition2,particlePosition3,particlePosition4;
+    private Vector3 particlePosition,particlePosition2,particlePosition3,particlePosition4;
     private Vector3 camPosition;
     HumanParent parentSpeed;
 
     public float swipeSpeed = 15;
     public GameObject pickParent;
+    public GameObject pickDownParent;
     public GameObject pickObject;
     public GameObject tryAgainPanel;
     public GameObject finishPanel;
@@ -45,9 +47,20 @@ public class Human : MonoBehaviour
     public bool stairsUp = false;
     private bool finishControl = false;
     private bool answerControl = false;
+    
     // Start is called before the first frame update
     void Start()
     {
+        particlePositions.Add(particlePosition);
+        particlePositions.Add(particlePosition2);
+        particlePositions.Add(particlePosition3);
+        particlePositions.Add(particlePosition4);
+        
+        victoryParticles.Add(victoryParticle);
+        victoryParticles.Add(victoryParticle2);
+        victoryParticles.Add(victoryParticle3);
+        victoryParticles.Add(victoryParticle4);
+        
         imageCount = 0;
         ParticleFunction();
         
@@ -137,35 +150,28 @@ public class Human : MonoBehaviour
     }
 
     public void ParticleFunction() {
+
+        for (int i = 0; i < particlePositions.Count; i++)
+        {
+            particlePositions[i] = victoryParticles[i].transform.position;
+            victoryParticles[i].transform.position = new Vector3(10f, 10f, 10f);
+            victoryParticles[i].Pause();
+        }
         
-        particlePosition = victoryParticle.transform.position;
-        particlePosition2 = victoryParticle2.transform.position;
-        particlePosition3 = victoryParticle3.transform.position;
-        particlePosition4 = victoryParticle4.transform.position;
-        
-        victoryParticle.transform.position = new Vector3(10f, 10f, 10f);
-        victoryParticle2.transform.position = new Vector3(10f, 10f, 10f);
-        victoryParticle3.transform.position = new Vector3(10f, 10f, 10f);
-        victoryParticle4.transform.position = new Vector3(10f, 10f, 10f);
-        
-        victoryParticle.Pause();
-        victoryParticle2.Pause();
-        victoryParticle3.Pause();
-        victoryParticle4.Pause();
     }
 
-    public void PickUpFunction(Collider other) {
+    public void PickUpFunction(Collider pickUp) {
         
         pickCubePosition += 0.2f;
         count++;
         //Debug.Log("selam");
         thisAnimator.SetBool("pick", true);
         thisAnimator.SetBool("return", false);
-        other.gameObject.transform.SetParent(pickParent.transform);
-        other.transform.localPosition = new Vector3(0, pickCubePosition, 0);
+        pickUp.gameObject.transform.SetParent(pickParent.transform);
+        pickUp.transform.localPosition = new Vector3(0, pickCubePosition, 0);
         //ParticleSystem pickSystem = Instantiate(victoryParticle2, other.transform);
-        other.gameObject.GetComponent<Collider>().enabled = false;
-        pick.Add(other.gameObject);
+        pickUp.gameObject.GetComponent<Collider>().enabled = false;
+        pick.Add(pickUp.gameObject);
 
     }
 
@@ -251,6 +257,7 @@ public class Human : MonoBehaviour
             pick[pick.Count - 1].tag = "Untagged";
             pick[pick.Count - 1].transform.SetParent(null);
             pick[pick.Count - 1].transform.position = new Vector3(transform.position.x,transform.position.y + 1 + stairsCount-stairsCount2-1.4f, transform.position.z+stairsCount);
+            pick[pick.Count - 1].transform.SetParent(pickDownParent.transform);
             pick[pick.Count - 1].GetComponent<Collider>().enabled = true;
             pick[pick.Count - 1].GetComponent<Collider>().isTrigger = false;
             pick.Remove(pick[pick.Count - 1]);
@@ -272,19 +279,19 @@ public class Human : MonoBehaviour
     }
 
     public void FinishAnimFunction() {
+        
         finishControl = true;
         parentSpeed.speed = 0f;
         backButton.SetActive(false);
-        thisAnimator.SetBool("victory", true);
-        victoryParticle.transform.position = particlePosition;
-        victoryParticle2.transform.position = particlePosition2;
-        victoryParticle3.transform.position = particlePosition3;
-        victoryParticle4.transform.position = particlePosition4;
-        victoryParticle.Play();
-        victoryParticle2.Play();
-        victoryParticle3.Play();
-        victoryParticle4.Play();
         finishPanel.SetActive(true);
+        thisAnimator.SetBool("victory", true);
+        
+        for (int i = 0; i < particlePositions.Count; i++)
+        {
+            victoryParticles[i].transform.position = particlePositions[i];
+            victoryParticles[i].Play();
+        }
+        
         foreach(GameObject cube in pick) {
             if(cube.activeSelf == true)
                 cube.SetActive(false);

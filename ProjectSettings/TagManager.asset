@@ -10,6 +10,7 @@ TagManager:
   - stairs
   - finish
   - finishAnim
+  - sea
   layers:
   - Default
   - TransparentFX
