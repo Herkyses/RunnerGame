@@ -11,6 +11,8 @@ TagManager:
   - finish
   - finishAnim
   - sea
+  - true
+  - false
   layers:
   - Default
   - TransparentFX
