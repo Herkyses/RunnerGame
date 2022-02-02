@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Human : MonoBehaviour
+public class Human : Singleton<Human>
 {
+    
     public Animator thisAnimator;
     float positionValue;
     public Camera cam;
@@ -19,7 +20,6 @@ public class Human : MonoBehaviour
     
     public Vector3 camPosition;
     public HumanParent parentSpeed;
-    private UIManager uıManager;
     public float swipeSpeed = 15;
     public GameObject pickParent;
     public GameObject pickObject;
@@ -40,7 +40,7 @@ public class Human : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        uıManager = FindObjectOfType<UIManager>();
+        
         thisAnimator = gameObject.GetComponent<Animator>();
         parentSpeed = GameObject.FindObjectOfType<HumanParent>();
         pick = new List<GameObject>();
@@ -95,7 +95,7 @@ public class Human : MonoBehaviour
         //uıManager = other.GetComponent<UIManager>();
         if (other.tag == "finishAnim")
         {
-            uıManager.Victory();
+            UIManager.Instance.Victory();
             CubesEmpty();
         }
         
@@ -107,7 +107,7 @@ public class Human : MonoBehaviour
         //uıManager = collision.collider.GetComponent<UIManager>();
         if (collision.collider.tag == "sea")
         {
-            uıManager.Faileds();
+            UIManager.Instance.Faileds();
             CubesEmpty();
             
         }

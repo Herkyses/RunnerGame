@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    private Human playerObject ;
+    
     public GameObject finishPanel;
     public GameObject stopButton;
     private HumanParent parentSpeed;
@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     public bool finished = false;
     void Start()
     {
-        playerObject = FindObjectOfType<Human>();
         parentSpeed = FindObjectOfType<HumanParent>();
         Time.timeScale = 1f;
     }
@@ -22,7 +21,7 @@ public class UIManager : MonoBehaviour
     public void Victory()
     {
         
-        playerObject.GetComponent<Animator>().SetBool("victory",true);
+        Human.Instance.GetComponent<Animator>().SetBool("victory",true);
         parentSpeed.speed = 0f;
         finishPanel.SetActive(true);
         stopButton.SetActive(false);
@@ -33,7 +32,7 @@ public class UIManager : MonoBehaviour
     {
         stopButton.transform.localScale = new Vector3(0, 0, 0);
         tryAgainPanel.SetActive(true);
-        playerObject.finishControl = true;
+        Human.Instance.finishControl = true;
         parentSpeed.speed = 0f;
         
         
