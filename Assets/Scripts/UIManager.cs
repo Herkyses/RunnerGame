@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(PauseMenuControls))]
 public class UIManager : Singleton<UIManager>
 {
     
@@ -12,11 +14,19 @@ public class UIManager : Singleton<UIManager>
     private HumanParent parentSpeed;
     [SerializeField] private GameObject tryAgainPanel;
     [SerializeField] private GameObject resumePanel;
+    [SerializeField] private Button restartButton;
+    [SerializeField] private Button pauseButton;
+    private PauseMenuControls _pauseMenuControls;
+    
     public bool finished = false;
+
     void Start()
     {
         parentSpeed = FindObjectOfType<HumanParent>();
         Time.timeScale = 1f;
+        restartButton.onClick.AddListener(Restart);
+        pauseButton.onClick.AddListener(pause);
+        _pauseMenuControls = GetComponent<PauseMenuControls>();
     }
     
     public void Victory()
@@ -39,8 +49,11 @@ public class UIManager : Singleton<UIManager>
         
         
     }
-    public void tryAgain() {
+    public void Restart() {
         Application.LoadLevel(Application.loadedLevel);
+        if(tryAgainPanel.activeSelf)
+            tryAgainPanel.gameObject.SetActive(false);
+        resume();
     }
     public void resume() {
         stopButton.transform.localScale = new Vector3(2f, 2f, 2f);
