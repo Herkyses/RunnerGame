@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Answer : MonoBehaviour
 {
-    public GameObject pickCubes;
+   
     public GameObject cubeFalseParent;
     private Transform parentTransform;
     private Human playerObject;
@@ -18,21 +19,10 @@ public class Answer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        if (gameObject.tag == "true")
-        {
-            //parentTransform = playerObject.pickParent.transform;
-            pickAnimatorControl = true;
-            returnAnimatorControl = false;
-            cubePosition = 0.2f;
-        }
-        else if (gameObject.tag == "false")
-        {
-            //parentTransform = playerObject.pickDownParent.transform;
-            pickAnimatorControl = false;
-            returnAnimatorControl = true;
-            cubePosition = -0.2f;
-        }
+        bool answerIsTrue = gameObject.tag == "true";
+        pickAnimatorControl = answerIsTrue;
+        returnAnimatorControl = !answerIsTrue;
+        cubePosition = answerIsTrue ?  0.2f : -0.2f;
     }
     
 
@@ -43,15 +33,10 @@ public class Answer : MonoBehaviour
             playerObject = other.GetComponent<Human>();
             if (gameObject.tag == "true")
             {
+                GameManager.OnAnswerCorrect.Invoke(cubePosition);
                 for (int j = 0; j < 3; j++)
                 {
                     
-                    playerObject.pickCubePosition += cubePosition;
-                    GameObject newObject = Instantiate(pickCubes,playerObject.pickParent.transform);
-                    //newObject.transform.SetParent(playerObject.pickParent.transform);
-                    newObject.transform.localPosition = new Vector3(0, playerObject.pickCubePosition, 0);
-                    newObject.GetComponent<Collider>().enabled = false;
-                    playerObject.pick.Add(newObject);
 
                     if (j == 1)
                     {
@@ -61,8 +46,6 @@ public class Answer : MonoBehaviour
                     }
 
                 }
-
-
                 transform.parent.gameObject.SetActive(false);
             }
             else if (gameObject.tag == "false")

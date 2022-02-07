@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Human : Singleton<Human>
@@ -36,7 +37,7 @@ public class Human : Singleton<Human>
     public bool stairsUp = false;
     public bool finishControl = false;
     private bool answerControl = false;
-    
+    public GameObject pickCubes;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +47,21 @@ public class Human : Singleton<Human>
         pick = new List<GameObject>();
         cam = Camera.main;
         
+        GameManager.OnAnswerCorrect+=OnAnswerCorrect;
         
     }
+
+    private void OnAnswerCorrect(float val)
+    {
+        pickCubePosition += val;
+        GameObject newObject = Instantiate(pickCubes,pickParent.transform);
+        //newObject.transform.SetParent(playerObject.pickParent.transform);
+        newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
+        newObject.GetComponent<Collider>().enabled = false;
+        pick.Add(newObject);
+
+    }
+
     void Update() {
         
         if(stairsUp == true) {
