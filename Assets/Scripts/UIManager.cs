@@ -2,15 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
     
-    public GameObject finishPanel;
-    public GameObject stopButton;
+    [SerializeField] private GameObject finishPanel;
+    [SerializeField] private GameObject stopButton;
     private HumanParent parentSpeed;
-    public GameObject tryAgainPanel;
-    public GameObject resumePanel;
+    [SerializeField] private GameObject tryAgainPanel;
+    [SerializeField] private GameObject resumePanel;
     public bool finished = false;
     void Start()
     {
@@ -51,6 +52,7 @@ public class UIManager : Singleton<UIManager>
         resumePanel.transform.localScale = new Vector3(1f, 1f, 1f);
         Time.timeScale = 0f;
     }
+    
     
     
 }

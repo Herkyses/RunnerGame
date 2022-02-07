@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="32f6a0ee-3b9f-44b8-9910-448c15db1931" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Human.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/prefab/Character (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/prefab/Character (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -62,7 +67,12 @@
       <workItem from="1642510050644" duration="1568000" />
       <workItem from="1642527829114" duration="1669000" />
       <workItem from="1642584364915" duration="1864000" />
-      <workItem from="1642941289452" duration="4750000" />
+      <workItem from="1642941289452" duration="5524000" />
+      <workItem from="1643119002878" duration="5122000" />
+      <workItem from="1643184408267" duration="29783000" />
+      <workItem from="1643719720860" duration="11968000" />
+      <workItem from="1643786421150" duration="14367000" />
+      <workItem from="1644242361037" duration="580000" />
     </task>
     <servers />
   </component>

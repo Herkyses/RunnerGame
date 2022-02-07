@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 7760288520149601074}
   m_Layer: 0
   m_Name: Character (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,32 +1234,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3265a0b8cbf0c46af507af2bcba5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisAnimator: {fileID: 0}
   cam: {fileID: 0}
   pick: []
-  images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  victoryParticles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  camPosition: {x: 0, y: 0, z: 0}
+  parentSpeed: {fileID: 0}
   swipeSpeed: 100
   pickParent: {fileID: 2845914852688195214}
-  pickDownParent: {fileID: 0}
   pickObject: {fileID: 7187644156673820308, guid: 58ccb094b51ae754abd3349b9bd0ebb3,
     type: 3}
-  tryAgainPanel: {fileID: 0}
-  finishPanel: {fileID: 0}
-  backButton: {fileID: 0}
   camFollow: {fileID: 0}
+  pickCubePosition: 0
   stairsCount: 0
-  stairsCount2: 0
   touched: 0
   camMove: 0
   stairsUp: 0
+  finishControl: 0
 --- !u!1 &5259083145490455126
 GameObject:
   m_ObjectHideFlags: 0

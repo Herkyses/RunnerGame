@@ -13,6 +13,7 @@ TagManager:
   - sea
   - true
   - false
+  - tryagain
   layers:
   - Default
   - TransparentFX

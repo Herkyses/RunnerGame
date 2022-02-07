@@ -6,6 +6,9 @@ using UnityEngine;
 public class Singleton<T> : MonoBehaviour where T: Singleton<T>
 {
     private static T instance = null;
+    private bool full = false;
+    public static List<GameObject> playerObjects;
+    public static int tryNumber =0;
     // Start is called before the first frame update
 
     public static T Instance
@@ -14,6 +17,7 @@ public class Singleton<T> : MonoBehaviour where T: Singleton<T>
         {
             if (instance == null)
             {
+                
                 instance = FindObjectOfType(typeof(T)) as T;
                 if (instance == null)
                 {
@@ -24,21 +28,37 @@ public class Singleton<T> : MonoBehaviour where T: Singleton<T>
                 
             }
                 instance = FindObjectOfType(typeof(T)) as T;
-            
+
+
+               
             return instance;
         }
+        
     }
 
     public void Awake()
     {
+        
+        
         if (instance == null)
         {
             instance = this as T;
             DontDestroyOnLoad(gameObject);
+            
+            
         }
-        else
-        {
+        
+        
+        
+           
+        else 
+        {   
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        Debug.Log("trd"+tryNumber);
     }
 }
