@@ -4,6 +4,6 @@ namespace DefaultNamespace
 {
     public static class GameManager 
     {
-        public static Action<float> OnAnswerCorrect;
+        public static Action<float> OnAnswerControl;
     }
 }

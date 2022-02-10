@@ -1250,6 +1250,8 @@ MonoBehaviour:
   camMove: 0
   stairsUp: 0
   finishControl: 0
+  pickCubes: {fileID: 7187644156673820308, guid: 58ccb094b51ae754abd3349b9bd0ebb3,
+    type: 3}
 --- !u!1 &5259083145490455126
 GameObject:
   m_ObjectHideFlags: 0

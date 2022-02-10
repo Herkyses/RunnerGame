@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861033952665911919}
   m_Layer: 0
-  m_Name: False_Cube_Parent
+  m_Name: Answer_Cube_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf753967dcbfde479dec0734fa430fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickCubes: {fileID: 7187644156673820308, guid: 58ccb094b51ae754abd3349b9bd0ebb3,
-    type: 3}
   cubeFalseParent: {fileID: 5832970943722339594}

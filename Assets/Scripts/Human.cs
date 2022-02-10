@@ -38,7 +38,6 @@ public class Human : Singleton<Human>
     public bool finishControl = false;
     private bool answerControl = false;
     public GameObject pickCubes;
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -47,20 +46,50 @@ public class Human : Singleton<Human>
         pick = new List<GameObject>();
         cam = Camera.main;
         
-        GameManager.OnAnswerCorrect+=OnAnswerCorrect;
         
     }
 
-    private void OnAnswerCorrect(float val)
+    private void OnEnable()
     {
-        pickCubePosition += val;
-        GameObject newObject = Instantiate(pickCubes,pickParent.transform);
-        //newObject.transform.SetParent(playerObject.pickParent.transform);
-        newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
-        newObject.GetComponent<Collider>().enabled = false;
-        pick.Add(newObject);
+        GameManager.OnAnswerControl+=OnAnswerControl;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnAnswerControl-=OnAnswerControl;
+    }
+
+    private void OnAnswerControl(float val)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (val > 0)
+            {
+                pickCubePosition += val;
+                GameObject newObject = Instantiate(pickCubes,pickParent.transform);
+                newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
+                newObject.GetComponent<Collider>().enabled = false;
+                pick.Add(newObject);
+
+            }
+            else if (val < 0)
+            {
+                if (pick.Count >= 3)
+                {
+                    GameObject playerObjectPick = pick[pick.Count - 1];
+                    playerObjectPick.SetActive(false);
+                    playerObjectPick.transform.SetParent(null);
+                    pick.Remove(playerObjectPick);
+                    pickCubePosition += val;
+                }
+                
+            }
+            
+        }
 
     }
+
+    
 
     void Update() {
         
@@ -69,7 +98,6 @@ public class Human : Singleton<Human>
             cam.transform.position = Vector3.Lerp(cam.transform.position,new Vector3(cam.transform.position.x, camPosition.y ,cam.transform.position.z),.2f*Time.deltaTime);
             
         }
-        Debug.Log("element count "+pick.Count);
         if(finishControl == false) {
             
             if(Input.touchCount <= 1) {
@@ -95,18 +123,16 @@ public class Human : Singleton<Human>
                 } */
             }
             
-
-
+            
         }
         
-
-
+        
     }
 
     
     
     private void OnTriggerEnter(Collider other) {
-        //uıManager = other.GetComponent<UIManager>();
+    
         if (other.tag == "finishAnim")
         {
             UIManager.Instance.Victory();
@@ -118,7 +144,7 @@ public class Human : Singleton<Human>
 
     private void OnCollisionEnter(Collision collision)
     {
-        //uıManager = collision.collider.GetComponent<UIManager>();
+        
         if (collision.collider.tag == "sea")
         {
             UIManager.Instance.Faileds();

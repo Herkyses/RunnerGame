@@ -49,7 +49,6 @@ public class Stairs : MonoBehaviour
                 }
             }
             playerObject.camPosition = playerObject.cam.transform.position + new Vector3(0, .35f, .1f);
-            //cam.transform.position += new Vector3(0, .3f, -.2f);
             playerObject.stairsUp = true;
             stairsCount = 0;
             stairsCount2 = -0.2f;

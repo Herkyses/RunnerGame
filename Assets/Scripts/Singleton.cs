@@ -28,9 +28,7 @@ public class Singleton<T> : MonoBehaviour where T: Singleton<T>
                 
             }
                 instance = FindObjectOfType(typeof(T)) as T;
-
-
-               
+                
             return instance;
         }
         
@@ -39,24 +37,18 @@ public class Singleton<T> : MonoBehaviour where T: Singleton<T>
     public void Awake()
     {
         
-        
         if (instance == null)
         {
             instance = this as T;
             DontDestroyOnLoad(gameObject);
             
-            
         }
         
-        
-        
-           
         else 
         {   
             Destroy(gameObject);
         }
     }
-
     private void Update()
     {
         Debug.Log("trd"+tryNumber);

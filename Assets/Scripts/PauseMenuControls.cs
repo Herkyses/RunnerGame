@@ -13,8 +13,7 @@ public class PauseMenuControls : MonoBehaviour
     public Button resumeButton;
 
     public Button restartButton;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         Time.timeScale = 1f;

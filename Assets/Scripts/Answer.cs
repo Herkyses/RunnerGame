@@ -33,16 +33,12 @@ public class Answer : MonoBehaviour
             playerObject = other.GetComponent<Human>();
             if (gameObject.tag == "true")
             {
-                GameManager.OnAnswerCorrect.Invoke(cubePosition);
+                GameManager.OnAnswerControl.Invoke(cubePosition);
                 for (int j = 0; j < 3; j++)
                 {
-                    
-
                     if (j == 1)
                     {
-
                         AnswerControl();
-
                     }
 
                 }
@@ -54,15 +50,11 @@ public class Answer : MonoBehaviour
 
                 if (playerObject.pick.Count >= 3)
                 {
-                    //GameObject playerObjectPick = playerObject.pick[playerObject.pick.Count - 1];
+                    GameManager.OnAnswerControl.Invoke(cubePosition);
+                    
                     for (int i = 1; i < 4; i++)
                     {
-                        GameObject playerObjectPick = playerObject.pick[playerObject.pick.Count - 1];
-                        playerObjectPick.SetActive(false);
-                        playerObjectPick.transform.SetParent(cubeFalseParent.transform);
-                        playerObject.pick.Remove(playerObjectPick);
-                        playerObject.pickCubePosition += cubePosition;
-
+                        
                         if (playerObject.pick.Count == 0)
                         {
                             AnswerControl();
@@ -86,7 +78,6 @@ public class Answer : MonoBehaviour
 
     public void AnswerControl()
     {
-        
         playerObject.GetComponent<Animator>().SetBool("pick",pickAnimatorControl);
         playerObject.GetComponent<Animator>().SetBool("return",returnAnimatorControl);
     }
