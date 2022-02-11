@@ -31,6 +31,7 @@ public class ParticleControl : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //UIManager.Instance.Victory();
             for (int i = 0; i < particlePositions.Count; i++)
             {
                 victoryParticles[i].transform.position = particlePositions[i];

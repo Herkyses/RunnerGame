@@ -9,9 +9,7 @@ public class PauseMenuControls : MonoBehaviour
 {
     public GameObject pauseButtonGO;
     public GameObject resumePanel;
-
     public Button resumeButton;
-
     public Button restartButton;
     
     void Start()

@@ -4,14 +4,11 @@
     <list default="true" id="32f6a0ee-3b9f-44b8-9910-448c15db1931" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Answer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Human.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParticleControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParticleControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenuControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenuControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stairs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stairs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/prefab/Answer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/prefab/Answer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Main/prefab/Character (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/prefab/Character (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,8 @@
       <workItem from="1643786421150" duration="14367000" />
       <workItem from="1644242361037" duration="1775000" />
       <workItem from="1644417456127" duration="10452000" />
-      <workItem from="1644498987944" duration="250000" />
+      <workItem from="1644498987944" duration="6137000" />
+      <workItem from="1644517795458" duration="5173000" />
     </task>
     <servers />
   </component>

@@ -45,8 +45,7 @@ public class Human : Singleton<Human>
         parentSpeed = GameObject.FindObjectOfType<HumanParent>();
         pick = new List<GameObject>();
         cam = Camera.main;
-        
-        
+
     }
 
     private void OnEnable()
@@ -90,7 +89,6 @@ public class Human : Singleton<Human>
     }
 
     
-
     void Update() {
         
         if(stairsUp == true) {
@@ -130,30 +128,25 @@ public class Human : Singleton<Human>
     }
 
     
-    
-    private void OnTriggerEnter(Collider other) {
-    
-        if (other.tag == "finishAnim")
-        {
-            UIManager.Instance.Victory();
-            CubesEmpty();
-        }
-        
-
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
         if (collision.collider.tag == "sea")
         {
-            UIManager.Instance.Faileds();
+            GameManager.Failed.Invoke();
             CubesEmpty();
-            
         }
     }
-    
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "finishAnim")
+        {
+            GameManager.Victory.Invoke();
+            CubesEmpty();
+        }
+    }
+
 
     public void CubesEmpty()
     {
@@ -163,7 +156,5 @@ public class Human : Singleton<Human>
         }
     }
     
-    
-
 
 }

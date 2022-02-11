@@ -13968,7 +13968,7 @@ GameObject:
   - component: {fileID: 1203079650}
   - component: {fileID: 1203079649}
   m_Layer: 5
-  m_Name: TryPanel
+  m_Name: FailedPanel
   m_TagString: tryagain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15976,6 +15976,7 @@ GameObject:
   - component: {fileID: 1424607482}
   - component: {fileID: 1424607486}
   - component: {fileID: 1424607487}
+  - component: {fileID: 1424607488}
   m_Layer: 5
   m_Name: UIManager
   m_TagString: Untagged
@@ -16103,6 +16104,20 @@ MonoBehaviour:
   resumePanel: {fileID: 1536727787}
   resumeButton: {fileID: 1399490654}
   restartButton: {fileID: 844209433}
+--- !u!114 &1424607488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424607481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599aa94d309be4d4999f910fcbd40745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restartButton: {fileID: 1980611746}
+  victoryPanel: {fileID: 1620565745}
 --- !u!4 &1433709264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7562798230162168878, guid: 58ccb094b51ae754abd3349b9bd0ebb3,
@@ -16834,7 +16849,7 @@ GameObject:
   - component: {fileID: 1536727790}
   - component: {fileID: 1536727789}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: PausedPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17872,7 +17887,7 @@ GameObject:
   - component: {fileID: 1620565748}
   - component: {fileID: 1620565747}
   m_Layer: 5
-  m_Name: Finish
+  m_Name: VictoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19958,9 +19973,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1424607481}
         m_TargetAssemblyTypeName: ButtonControl, Assembly-CSharp
-        m_MethodName: tryAgain
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

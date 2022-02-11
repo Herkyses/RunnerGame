@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,6 +21,17 @@ public class UIManager : Singleton<UIManager>
     
     public bool finished = false;
 
+    private void OnEnable()
+    {
+        GameManager.Failed += Faileds;
+        GameManager.Victory += Victory;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Failed -= Faileds;
+        GameManager.Victory -= Victory;
+    }
     void Start()
     {
         parentSpeed = FindObjectOfType<HumanParent>();
@@ -33,6 +45,7 @@ public class UIManager : Singleton<UIManager>
     {
         
         Human.Instance.GetComponent<Animator>().SetBool("victory",true);
+        Debug.Log("parentspeed:"+parentSpeed);
         parentSpeed.speed = 0f;
         finishPanel.SetActive(true);
         stopButton.SetActive(false);
