@@ -58,28 +58,34 @@ public class Human : Singleton<Human>
         GameManager.OnAnswerControl-=OnAnswerControl;
     }
 
-    private void OnAnswerControl(float val)
+    private void OnAnswerControl(int times)
     {
-        for (int i = 0; i < 3; i++)
+        float deltaValue = 0.2f;
+        var counter = Mathf.Abs(times);
+        for (int i = 0; i < counter; i++)
         {
-            if (val > 0)
+            if (times > 0)
             {
-                pickCubePosition += val;
+                pickCubePosition += deltaValue;
                 GameObject newObject = Instantiate(pickCubes,pickParent.transform);
                 newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
                 newObject.GetComponent<Collider>().enabled = false;
                 pick.Add(newObject);
 
             }
-            else if (val < 0)
+            else if (times < 0)
             {
-                if (pick.Count >= 3)
+                if (pick.Count >0 )
                 {
                     GameObject playerObjectPick = pick[pick.Count - 1];
                     playerObjectPick.SetActive(false);
                     playerObjectPick.transform.SetParent(null);
                     pick.Remove(playerObjectPick);
-                    pickCubePosition += val;
+                    pickCubePosition += deltaValue;
+                }
+                else
+                {
+                    break;
                 }
                 
             }

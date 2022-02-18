@@ -33,57 +33,8 @@ public class Answer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            /*
-            playerObject = other.GetComponent<Human>();
-            if (gameObject.tag == "true")
-            {
-                GameManager.OnAnswerControl.Invoke(cubePosition);
-                for (int j = 0; j < 3; j++)
-                {
-                    if (j == 1)
-                    {
-                        AnswerControl();
-                    }
-
-                }
-                transform.parent.gameObject.SetActive(false);
-            }
-            else if (gameObject.tag == "false")
-            {
-                gameObject.GetComponentInParent<Transform>().position = new Vector3(0, 0, 0);
-
-                if (playerObject.pick.Count >= 3)
-                {
-                    GameManager.OnAnswerControl.Invoke(cubePosition);
-                    
-                    for (int i = 1; i < 4; i++)
-                    {
-                        
-                        if (playerObject.pick.Count == 0)
-                        {
-                            AnswerControl();
-                        }
-
-                    }
-
-                }
-                else if (playerObject.pick.Count == 0)
-                {
-                    AnswerControl();
-                }
-
-                transform.parent.gameObject.SetActive(false);
-            }
-            */
-            for (int i = 0; i < answerPortal.portals.Count; i++)
-            {
-                if (answerNumber == answerPortal.portals[i].portalNumber)
-                {
-                    Debug.Log("blabla"+answerPortal.portals[i].processValue);
-                    answerPortal.portals[i].CallProcess();
-                }
-            }
-            
+            int result = LevelData.ProcessControl(answerPortal, answerNumber);
+            GameManager.OnAnswerControl(result);
         }
     }
 
