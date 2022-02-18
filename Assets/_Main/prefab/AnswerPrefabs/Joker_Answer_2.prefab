@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5832970943722339594
+--- !u!1 &3683694683242692423
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4861033952665911919}
+  - component: {fileID: 2348662695656521762}
   m_Layer: 0
   m_Name: Answer_Cube_Parent
   m_TagString: Untagged
@@ -16,21 +16,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4861033952665911919
+--- !u!4 &2348662695656521762
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832970943722339594}
+  m_GameObject: {fileID: 3683694683242692423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.19036816, y: 0.543448, z: 0}
   m_LocalScale: {x: 0.59773976, y: 1, z: 10.65235}
   m_Children: []
-  m_Father: {fileID: 6449570047649952518}
+  m_Father: {fileID: 4209886185880744267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6449570047649952516
+--- !u!1 &4209886185880744265
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,56 +38,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6449570047649952518}
-  - component: {fileID: 6449570047649952519}
-  - component: {fileID: 6449570047649952513}
+  - component: {fileID: 4209886185880744267}
+  - component: {fileID: 4209886185880744266}
+  - component: {fileID: 4209886185880744268}
   m_Layer: 0
-  m_Name: Answer
-  m_TagString: true
+  m_Name: Joker_Answer_2
+  m_TagString: false
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6449570047649952518
+--- !u!4 &4209886185880744267
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449570047649952516}
+  m_GameObject: {fileID: 4209886185880744265}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8048415, y: -1.3533707, z: 2.390768}
-  m_LocalScale: {x: 1.6729687, y: 1, z: 0.093876}
+  m_LocalPosition: {x: -0.08084142, y: -1.3533707, z: 2.39077}
+  m_LocalScale: {x: 2.7988243, y: 1, z: 0.008812703}
   m_Children:
-  - {fileID: 4861033952665911919}
+  - {fileID: 2348662695656521762}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6449570047649952519
+--- !u!65 &4209886185880744266
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449570047649952516}
+  m_GameObject: {fileID: 4209886185880744265}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1749737, y: 2.0868955, z: 0.5}
-  m_Center: {x: -0.19036815, y: 0.543448, z: 0}
---- !u!114 &6449570047649952513
+  m_Size: {x: 0.6327501, y: 2.0868955, z: 0.5}
+  m_Center: {x: 0.080744654, y: 0.543448, z: 0}
+--- !u!114 &4209886185880744268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6449570047649952516}
+  m_GameObject: {fileID: 4209886185880744265}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecf753967dcbfde479dec0734fa430fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalTypes: {fileID: 11400000, guid: 65ff5dfd5f7ce114a95a85bdece00864, type: 2}
-  cubeFalseParent: {fileID: 5832970943722339594}
-  portalValue: 0
+  cubeFalseParent: {fileID: 3683694683242692423}
+  answerNumber: 5
+  answerPortal: {fileID: 0}

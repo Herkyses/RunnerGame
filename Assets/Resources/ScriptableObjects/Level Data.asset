@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d334c8295e912b4fa523a59c0495f66, type: 3}
+  m_Name: Level Data
+  m_EditorClassIdentifier: 
+  portals:
+  - portalObject: {fileID: 3547696855524192766, guid: 09443290140f4224f8db9040975180b4,
+      type: 3}
+    processValue: 0
+    portalType: 0
+    portalNumber: 0
+  - portalObject: {fileID: 4741870654945065146, guid: 6c3cb1c719d039f429275604c1b5fc0f,
+      type: 3}
+    processValue: 1
+    portalType: 2
+    portalNumber: 1
+  - portalObject: {fileID: 308306113847411639, guid: 2f78c9defb15ceb4bb38fd1babc52eea,
+      type: 3}
+    processValue: 2
+    portalType: 0
+    portalNumber: 2
+  - portalObject: {fileID: 1702283503417650614, guid: 58ebe5ae5552c9e4684560aa08b23971,
+      type: 3}
+    processValue: 3
+    portalType: 0
+    portalNumber: 3
+  - portalObject: {fileID: 7230684091638532681, guid: 056abb3bc20dba044859cfcb90dd8172,
+      type: 3}
+    processValue: 4
+    portalType: 0
+    portalNumber: 4
+  - portalObject: {fileID: 4209886185880744265, guid: 971dda9b2bd6faf4fa0cb8e749c16210,
+      type: 3}
+    processValue: 5
+    portalType: 0
+    portalNumber: 5
+  - portalObject: {fileID: 8325743938608560138, guid: d5205b65473d45447ba80a0ab97c3f8f,
+      type: 3}
+    processValue: 6
+    portalType: 0
+    portalNumber: 6
+  - portalObject: {fileID: 4208223251878836001, guid: 80aa2a0b179981c48b506bf2cbb5e264,
+      type: 3}
+    processValue: 7
+    portalType: 0
+    portalNumber: 7

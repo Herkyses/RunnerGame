@@ -4,16 +4,22 @@
     <list default="true" id="32f6a0ee-3b9f-44b8-9910-448c15db1931" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HCRunner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Answer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Human.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParticleControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParticleControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenuControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenuControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Main/prefab/Answer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Main/prefab/Answer.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,10 +49,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12128">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12128" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -76,7 +82,11 @@
       <workItem from="1644242361037" duration="1775000" />
       <workItem from="1644417456127" duration="10452000" />
       <workItem from="1644498987944" duration="6137000" />
-      <workItem from="1644517795458" duration="5173000" />
+      <workItem from="1644517795458" duration="5468000" />
+      <workItem from="1645044663658" duration="1524000" />
+      <workItem from="1645081963841" duration="12187000" />
+      <workItem from="1645120734964" duration="10677000" />
+      <workItem from="1645168935454" duration="11266000" />
     </task>
     <servers />
   </component>

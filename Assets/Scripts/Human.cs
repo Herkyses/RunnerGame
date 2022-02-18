@@ -146,7 +146,7 @@ public class Human : Singleton<Human>
             CubesEmpty();
         }
     }
-
+    
 
     public void CubesEmpty()
     {
