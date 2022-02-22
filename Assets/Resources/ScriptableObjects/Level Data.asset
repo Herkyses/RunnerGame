@@ -20,7 +20,7 @@ MonoBehaviour:
     portalNumber: 0
   - portalObject: {fileID: 4741870654945065146, guid: 6c3cb1c719d039f429275604c1b5fc0f,
       type: 3}
-    processValue: 5
+    processValue: 6
     portalPortalType: 2
     portalNumber: 1
   - portalObject: {fileID: 308306113847411639, guid: 2f78c9defb15ceb4bb38fd1babc52eea,

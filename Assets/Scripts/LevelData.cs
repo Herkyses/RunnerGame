@@ -20,8 +20,11 @@ public enum PortalType
 public class LevelData : ScriptableObject
 {
     public List<PortalValue> portals = new List<PortalValue>();
+    public static int pickCountValue;
     public static int ProcessControl(PortalType selectPortalType,int processValue)
     {
+        pickCountValue = Human.Instance.pick.Count;
+        
         int value=0;
         if (selectPortalType == PortalType.Divide)
         {
@@ -30,6 +33,8 @@ public class LevelData : ScriptableObject
         else if (selectPortalType == PortalType.Minus)
         {
             value = Human.Instance.pick.Count  - processValue;
+            if (value < 0)
+                value = 0;
         }
         else if (selectPortalType == PortalType.Multiply)
         {
@@ -43,6 +48,8 @@ public class LevelData : ScriptableObject
         return value;
 
     }
+
+    
 }
 
 [System.Serializable]

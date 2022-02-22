@@ -16,7 +16,7 @@ public class Answer : MonoBehaviour
     private bool returnAnimatorControl;
     private float cubePosition;
     public int answerNumber;
-    
+    public int pickValue;
     public PortalType answerPortal;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,10 @@ public class Answer : MonoBehaviour
         if (other.tag == "Player")
         {
             int result = LevelData.ProcessControl(answerPortal, answerNumber);
+            
             GameManager.OnAnswerControl(result);
+            Debug.Log("result"+result);
+            //Debug.Log("result2"+result2);
         }
     }
 

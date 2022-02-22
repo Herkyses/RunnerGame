@@ -62,35 +62,42 @@ public class Human : Singleton<Human>
     {
         float deltaValue = 0.2f;
         var counter = Mathf.Abs(times);
-        for (int i = 0; i < counter; i++)
-        {
-            if (times > 0)
+        //var counter = times;
+        
+            if (times > LevelData.pickCountValue)
             {
-                pickCubePosition += deltaValue;
-                GameObject newObject = Instantiate(pickCubes,pickParent.transform);
-                newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
-                newObject.GetComponent<Collider>().enabled = false;
-                pick.Add(newObject);
-
-            }
-            else if (times < 0)
-            {
-                if (pick.Count >0 )
+                for (int i = 0; i < times - LevelData.pickCountValue; i++)
                 {
-                    GameObject playerObjectPick = pick[pick.Count - 1];
-                    playerObjectPick.SetActive(false);
-                    playerObjectPick.transform.SetParent(null);
-                    pick.Remove(playerObjectPick);
                     pickCubePosition += deltaValue;
-                }
-                else
-                {
-                    break;
+                    GameObject newObject = Instantiate(pickCubes,pickParent.transform);
+                    newObject.transform.localPosition = new Vector3(0, pickCubePosition, 0);
+                    newObject.GetComponent<Collider>().enabled = false;
+                    pick.Add(newObject);
                 }
                 
+
+            }
+            else if (times < LevelData.pickCountValue)
+            {
+                for (int j = 0; j < LevelData.pickCountValue - times;j++)
+                {
+                    if (pick.Count >0 )
+                    {
+                        GameObject playerObjectPick = pick[pick.Count - 1];
+                        playerObjectPick.SetActive(false);
+                        playerObjectPick.transform.SetParent(null);
+                        pick.Remove(playerObjectPick);
+                        pickCubePosition -= deltaValue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
             }
             
-        }
+        
 
     }
 
