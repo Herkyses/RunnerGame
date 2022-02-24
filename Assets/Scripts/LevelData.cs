@@ -21,11 +21,13 @@ public class LevelData : ScriptableObject
 {
     public List<PortalValue> portals = new List<PortalValue>();
     public static int pickCountValue;
+    public List<string> processSymbol;
     public static int ProcessControl(PortalType selectPortalType,int processValue)
     {
         pickCountValue = Human.Instance.pick.Count;
         
         int value=0;
+        string processSymbol;
         if (selectPortalType == PortalType.Divide)
         {
             value = (Human.Instance.pick.Count) / processValue;
@@ -34,7 +36,12 @@ public class LevelData : ScriptableObject
         {
             value = Human.Instance.pick.Count  - processValue;
             if (value < 0)
+            {
                 value = 0;
+                Human.Instance.GetComponent<Animator>().SetBool("return",true);
+                Human.Instance.GetComponent<Animator>().SetBool("pick",false);
+            }
+                
         }
         else if (selectPortalType == PortalType.Multiply)
         {
@@ -58,7 +65,7 @@ public class PortalValue
     public GameObject portalObject;
     public int processValue;
     public PortalType portalPortalType;
-    
+    public string processSymbol;
     public int portalNumber;
 }
 

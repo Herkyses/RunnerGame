@@ -157,6 +157,7 @@ public class Human : Singleton<Human>
         {
             GameManager.Victory.Invoke();
             CubesEmpty();
+            parentSpeed.speed = 0f;
         }
     }
     
