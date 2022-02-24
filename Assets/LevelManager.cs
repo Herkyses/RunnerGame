@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour
 {
     public LevelData currentPortalData;
     public Answer[] answers;
-    public string[] processSymbols;
     public List<string> processSymbol = new List<string>();
     private void Start()
     {

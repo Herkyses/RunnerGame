@@ -50,6 +50,8 @@ public class LevelData : ScriptableObject
         else if (selectPortalType == PortalType.Plus)
         {
             value = Human.Instance.pick.Count + processValue;
+            Human.Instance.GetComponent<Animator>().SetBool("return",false);
+            Human.Instance.GetComponent<Animator>().SetBool("pick",true);
         }
         
         return value;
