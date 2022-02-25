@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class Answer : MonoBehaviour
 {
-    //[SerializeField] private PortalType portalTypes;
-   
-    public GameObject cubeFalseParent;
     private Transform parentTransform;
     private Human playerObject;
     private Stairs stairObject;

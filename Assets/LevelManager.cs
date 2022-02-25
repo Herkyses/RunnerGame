@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
 {
+    public LevelData[] allLevels;
     public LevelData currentPortalData;
     public Answer[] answers;
     public List<string> processSymbol = new List<string>();
@@ -15,8 +16,13 @@ public class LevelManager : Singleton<LevelManager>
         Time.timeScale = 0f;
     }
 
-    private void Start()
+    public void SetLevel(int index)
     {
+        Instantiate(levels[index]);
+        
+        currentPortalData = allLevels[index];
+        
+        answers = currentPortalData.InstantiateAnswers();
         
         var portals = currentPortalData.portals;
         
@@ -50,7 +56,7 @@ public class LevelManager : Singleton<LevelManager>
             }
 
             var processSymbolValue = processSymbol[i];
-            answer.GetComponent<TextMesh>().text = processSymbolValue + answer.answerNumber.ToString();
+            answer.GetComponentInChildren<TextMesh>().text = processSymbolValue + answer.answerNumber.ToString();
         }
     }
 }

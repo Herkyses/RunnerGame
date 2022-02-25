@@ -43,8 +43,8 @@ public class UIManager : Singleton<UIManager>
         pauseButton.onClick.AddListener(pause);
         _pauseMenuControls = GetComponent<PauseMenuControls>();
         Debug.Log("count:"+LevelManager.Instance.levels.Count);
-        levelButtons[0].onClick.AddListener((delegate { StartGamePlay(LevelManager.Instance.levels[0]); }));
-        levelButtons[1].onClick.AddListener((delegate { StartGamePlay(LevelManager.Instance.levels[1]); }));
+        levelButtons[0].onClick.AddListener((delegate { StartGamePlay(0); }));
+        levelButtons[1].onClick.AddListener((delegate { StartGamePlay(1); }));
         //for(int i = 0; i<LevelManager.Instance.levels.Count;i++)
         //{
         //    levelButtons[i].onClick.AddListener((delegate { StartGamePlay(LevelManager.Instance.levels[i]); }));
@@ -71,10 +71,12 @@ public class UIManager : Singleton<UIManager>
         
     }
 
-    public void StartGamePlay(GameObject levelNumber)
+    public void StartGamePlay(int index)
     {
         startPanel.SetActive(false);
-        Instantiate(levelNumber);
+
+        LevelManager.Instance.SetLevel(index);
+        
         //levelNumber.SetActive(true);
         Time.timeScale = 1f;
     }
