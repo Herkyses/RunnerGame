@@ -3,13 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
     public LevelData currentPortalData;
     public Answer[] answers;
     public List<string> processSymbol = new List<string>();
+    public List<GameObject> levels = new List<GameObject>();
+
+    private void Awake()
+    {
+        Time.timeScale = 0f;
+    }
+
     private void Start()
     {
+        
         var portals = currentPortalData.portals;
         
         Debug.Assert(answers.Length == portals.Count, "Portals and answers must be the same count");

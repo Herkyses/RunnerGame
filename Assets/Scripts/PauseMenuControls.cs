@@ -14,7 +14,7 @@ public class PauseMenuControls : MonoBehaviour
     
     void Start()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
 
         resumeButton.onClick.AddListener(Resume);
         restartButton.onClick.AddListener(Restart);

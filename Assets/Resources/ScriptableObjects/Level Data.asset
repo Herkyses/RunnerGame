@@ -17,39 +17,144 @@ MonoBehaviour:
       type: 3}
     processValue: 5
     portalPortalType: 1
+    processSymbol: 
     portalNumber: 0
   - portalObject: {fileID: 4741870654945065146, guid: 6c3cb1c719d039f429275604c1b5fc0f,
       type: 3}
     processValue: 6
     portalPortalType: 2
+    processSymbol: 
     portalNumber: 1
   - portalObject: {fileID: 308306113847411639, guid: 2f78c9defb15ceb4bb38fd1babc52eea,
       type: 3}
     processValue: 2
     portalPortalType: 3
+    processSymbol: 
     portalNumber: 2
   - portalObject: {fileID: 1702283503417650614, guid: 58ebe5ae5552c9e4684560aa08b23971,
       type: 3}
     processValue: 12
     portalPortalType: 1
+    processSymbol: 
     portalNumber: 3
   - portalObject: {fileID: 7230684091638532681, guid: 056abb3bc20dba044859cfcb90dd8172,
       type: 3}
     processValue: 2
     portalPortalType: 0
+    processSymbol: 
     portalNumber: 4
   - portalObject: {fileID: 4209886185880744265, guid: 971dda9b2bd6faf4fa0cb8e749c16210,
       type: 3}
     processValue: 10
     portalPortalType: 2
+    processSymbol: 
     portalNumber: 5
   - portalObject: {fileID: 8325743938608560138, guid: d5205b65473d45447ba80a0ab97c3f8f,
       type: 3}
     processValue: 6
     portalPortalType: 1
+    processSymbol: 
     portalNumber: 6
   - portalObject: {fileID: 4208223251878836001, guid: 80aa2a0b179981c48b506bf2cbb5e264,
       type: 3}
+    processValue: 5
+    portalPortalType: 1
+    processSymbol: 
+    portalNumber: 7
+  - portalObject: {fileID: 4667590279742955632, guid: 2be2f3672ff8fe04bba4381f354f9411,
+      type: 3}
+    processValue: 6
+    portalPortalType: 1
+    processSymbol: 
+    portalNumber: 8
+  - portalObject: {fileID: 261449564233027312, guid: 84daedf5d4ff9ce4293a284805f10049,
+      type: 3}
+    processValue: 5
+    portalPortalType: 3
+    processSymbol: 
+    portalNumber: 9
+  - portalObject: {fileID: 3183437922719310135, guid: 308a3db2a465e774bb2cdd65a1ff4630,
+      type: 3}
+    processValue: 6
+    portalPortalType: 3
+    processSymbol: 
+    portalNumber: 10
+  - portalObject: {fileID: 7407614942209493472, guid: 46bf9253cd5d15144bf601b984bcb17d,
+      type: 3}
     processValue: 2
     portalPortalType: 2
-    portalNumber: 7
+    processSymbol: 
+    portalNumber: 11
+  - portalObject: {fileID: 8853481623525390586, guid: 642184119d1e28741819280e9a31faf6,
+      type: 3}
+    processValue: 2
+    portalPortalType: 0
+    processSymbol: 
+    portalNumber: 12
+  - portalObject: {fileID: 8330502040090768854, guid: 643fd8799e776a141ae286a159431876,
+      type: 3}
+    processValue: 2
+    portalPortalType: 3
+    processSymbol: 
+    portalNumber: 13
+  - portalObject: {fileID: 922659215024158980, guid: 61d99a57a53641e439af9d19dafa55b4,
+      type: 3}
+    processValue: 2
+    portalPortalType: 1
+    processSymbol: 
+    portalNumber: 14
+  - portalObject: {fileID: 741306464140299858, guid: 298e6be54df7acb46ab7979d4429e25a,
+      type: 3}
+    processValue: 2
+    portalPortalType: 2
+    processSymbol: 
+    portalNumber: 15
+  - portalObject: {fileID: 5869614720138989804, guid: b53a789b02cf4194e928e598b2e4e437,
+      type: 3}
+    processValue: 5
+    portalPortalType: 0
+    processSymbol: 
+    portalNumber: 16
+  - portalObject: {fileID: 2681457931609039009, guid: 791c8c322112fc244a22a952e4b0f942,
+      type: 3}
+    processValue: 5
+    portalPortalType: 3
+    processSymbol: 
+    portalNumber: 17
+  - portalObject: {fileID: 7262977480672413483, guid: b6f49831748b93049b532bbb49532923,
+      type: 3}
+    processValue: 5
+    portalPortalType: 2
+    processSymbol: 
+    portalNumber: 18
+  - portalObject: {fileID: 2780696458020998636, guid: 99020ceb14d2d0546ae3b2f4a05367d1,
+      type: 3}
+    processValue: 5
+    portalPortalType: 1
+    processSymbol: 
+    portalNumber: 19
+  - portalObject: {fileID: 4030355109746721797, guid: 6e70d79863c95b44ca57b0695523a6cb,
+      type: 3}
+    processValue: 2
+    portalPortalType: 2
+    processSymbol: 
+    portalNumber: 20
+  - portalObject: {fileID: 7509027473580638343, guid: ff8764fd27e6be840ac96615a96296cb,
+      type: 3}
+    processValue: 2
+    portalPortalType: 2
+    processSymbol: 
+    portalNumber: 21
+  - portalObject: {fileID: 4086291934885991810, guid: 0d9c6bc9c6677664e8c2e53816302151,
+      type: 3}
+    processValue: 2
+    portalPortalType: 3
+    processSymbol: 
+    portalNumber: 22
+  - portalObject: {fileID: 749426438420753733, guid: f4489c409b3ab214a817852721588762,
+      type: 3}
+    processValue: 2
+    portalPortalType: 0
+    processSymbol: 
+    portalNumber: 23
+  processSymbol: []

@@ -17,7 +17,8 @@ public class VictoryMenuControl : Singleton<VictoryMenuControl>
 
     public void RestartFromVictory()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        UIManager.Instance.Restart();
+        //Application.LoadLevel(Application.loadedLevel);
         victoryPanel.SetActive(false);
     }
     
