@@ -21,9 +21,12 @@ public class LevelData : ScriptableObject
 {
     
     public List<PortalValue> portals = new List<PortalValue>();
+    //public List<PlatformPosition> platformPosition = new List<PlatformPosition>();
     public static int pickCountValue;
     public GameObject portalPrefab;
     //public List<PlatformData> platforms;
+    public List<Vector3> platformsPositions;
+    public List<GameObject> platforms = new List<GameObject>();
     public GameObject platformPrefab; //TODO: @incomplete add level platforms as prefab 
     public List<string> processSymbol;
     public static int ProcessControl(PortalType selectPortalType,int processValue)
@@ -66,6 +69,8 @@ public class LevelData : ScriptableObject
     {
         var list = new List<Answer>();
         var parentTransform = GameObject.Find("Root").transform;
+        var platformParentTransform = GameObject.Find("Platforms").transform;
+        
         
         for (int i = 0; i < portals.Count; i++)
         {
@@ -73,10 +78,28 @@ public class LevelData : ScriptableObject
             var answer = portal.GetComponent<Answer>();
             portal.transform.localPosition = portals[i].portalPosition;
             list.Add(answer);
+            
         }
 
         return list.ToArray();
     }
+
+    public GameObject[] InstantiatePlatforms()
+    {
+        var platformList = platformsPositions;
+        var parentTransform = GameObject.Find("Platforms").transform;
+        var platformsObjects = new List<GameObject>();
+        for (int j = 0; j < portals.Count / 2; j++)
+        {
+            var platformInstantiateObject = GameObject.Instantiate(platformPrefab, parentTransform, false);
+            platformInstantiateObject.transform.localPosition = platformList[j];
+            Debug.Log("scdscdscdscdsc");
+            platformsObjects.Add(platformInstantiateObject);
+        }
+
+        return platformsObjects.ToArray();
+    }
+    
 }
 
 [System.Serializable]
@@ -88,5 +111,7 @@ public class PortalValue
     public string processSymbol;
     public int portalNumber;
 }
+
+
 
 

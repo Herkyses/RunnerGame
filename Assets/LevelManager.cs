@@ -8,6 +8,7 @@ public class LevelManager : Singleton<LevelManager>
     public LevelData[] allLevels;
     public LevelData currentPortalData;
     public Answer[] answers;
+    public GameObject[] platforms ;
     public List<string> processSymbol = new List<string>();
     public List<GameObject> levels = new List<GameObject>();
 
@@ -23,6 +24,8 @@ public class LevelManager : Singleton<LevelManager>
         currentPortalData = allLevels[index];
         
         answers = currentPortalData.InstantiateAnswers();
+        platforms = currentPortalData.InstantiatePlatforms();
+        //Invoke("callPlatforms",.01f);
         
         var portals = currentPortalData.portals;
         
@@ -59,4 +62,6 @@ public class LevelManager : Singleton<LevelManager>
             answer.GetComponentInChildren<TextMesh>().text = processSymbolValue + answer.answerNumber.ToString();
         }
     }
+
+    
 }

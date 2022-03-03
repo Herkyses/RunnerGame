@@ -14,61 +14,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portals:
   - portalPosition: {x: 1.4896804, y: -0.5053501, z: 2.1591797}
-    portalObject: {fileID: 4667590279742955632, guid: 2be2f3672ff8fe04bba4381f354f9411,
-      type: 3}
     processValue: 6
     portalPortalType: 1
     processSymbol: 
     portalNumber: 8
   - portalPosition: {x: -0.3151611, y: -0.5053501, z: 2.1591797}
-    portalObject: {fileID: 261449564233027312, guid: 84daedf5d4ff9ce4293a284805f10049,
-      type: 3}
     processValue: 5
     portalPortalType: 3
     processSymbol: 
     portalNumber: 9
   - portalPosition: {x: 0.06968045, y: -0.04134941, z: 47.19841}
-    portalObject: {fileID: 3183437922719310135, guid: 308a3db2a465e774bb2cdd65a1ff4630,
-      type: 3}
     processValue: 6
     portalPortalType: 3
     processSymbol: 
     portalNumber: 10
   - portalPosition: {x: 1.7936805, y: -0.04134941, z: 47.198402}
-    portalObject: {fileID: 7407614942209493472, guid: 46bf9253cd5d15144bf601b984bcb17d,
-      type: 3}
     processValue: 2
     portalPortalType: 2
     processSymbol: 
     portalNumber: 11
   - portalPosition: {x: -0.3151611, y: 0.33864975, z: 93.75918}
-    portalObject: {fileID: 8853481623525390586, guid: 642184119d1e28741819280e9a31faf6,
-      type: 3}
     processValue: 2
     portalPortalType: 0
     processSymbol: 
     portalNumber: 12
   - portalPosition: {x: 1.408839, y: 0.33864975, z: 93.75918}
-    portalObject: {fileID: 8330502040090768854, guid: 643fd8799e776a141ae286a159431876,
-      type: 3}
     processValue: 2
     portalPortalType: 3
     processSymbol: 
     portalNumber: 13
   - portalPosition: {x: -0.3151611, y: 0.7086506, z: 135.60918}
-    portalObject: {fileID: 922659215024158980, guid: 61d99a57a53641e439af9d19dafa55b4,
-      type: 3}
     processValue: 2
     portalPortalType: 1
     processSymbol: 
     portalNumber: 14
   - portalPosition: {x: 1.408839, y: 0.7086506, z: 135.60918}
-    portalObject: {fileID: 741306464140299858, guid: 298e6be54df7acb46ab7979d4429e25a,
-      type: 3}
     processValue: 2
     portalPortalType: 2
     processSymbol: 
     portalNumber: 15
   portalPrefab: {fileID: 6449570047649952516, guid: e2618ccfca5745046baad985cc68b14f,
+    type: 3}
+  platformsPositions:
+  - {x: 0, y: -0.8, z: -89.75}
+  - {x: 0, y: -0.4, z: -44.5}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0.4, z: 44.5}
+  platforms: []
+  platformPrefab: {fileID: 6595035570317899893, guid: ca209f8addb4f4c468d377a14eb136ec,
     type: 3}
   processSymbol: []
